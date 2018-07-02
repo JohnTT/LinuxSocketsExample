@@ -76,7 +76,7 @@ int main(int argc, char *argv[])
         pid = fork();
         if (pid < 0)
             error("ERROR on fork");
-        if (pid < 5)
+        if (pid == 0)
         {
             close(sockfd);
             echoMessage(newsockfd);
